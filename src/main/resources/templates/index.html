@@ -14,42 +14,39 @@
 
 <div class="container">
     <a class="btn btn-info" href="h2-console">H2-console</a>
-
+    <button class="btn btn-info" onclick="location.href='/showCommune'">See infection pressure</button>
 <div>
-<h1>Parishes</h1>
+<h1 id="headline">Parishes</h1>
     <div id="parishes">
 
     </div>
 </div>
 </div>
 
+<h2 id="create_new_parish">Create a new parish</h2>
+
 <form id="create_parish">
     <div>
-        <label class="title">Parish Code</label>
-        <input type="text" id="parish_code" class="form">
+        <input type="text" id="parish_code" class="form" placeholder="Parish Code">
     </div>
     <div>
-        <label class="title">Name</label>
-        <input type="text" id="parish_name" class="form">
+        <input type="text" id="parish_name" class="form" placeholder="Name">
     </div>
     <div>
-        <label class="title">Infection Pressure</label>
-        <input type="text" id="infection_pressure" class="form">
+        <input type="text" id="infection_pressure" class="form" placeholder="Infection Pressure">
     </div>
     <div>
-        <label class="title">Shutdown Time</label>
-        <input type="date" id="shutdown_time" class="form">
+        <input type="date" id="shutdown_time" class="form" placeholder="Shutdown Time (if any)">
     </div>
     <div>
-        <label class="title">Commune</label>
-        <input type="text" id="commune_id" class="form">
+        <input type="text" id="commune_id" class="form" placeholder="Commune">
     </div>
     <div>
         <input type="submit" id="submitButton" name="submitButton" value="Submit" class="form-btn">
     </div>
 </form>
 
-<h3><button onclick="location.href='/showCommune'">See infection pressure</button></h3>
+
 
 <script type="text/javascript" th:src="@{/frontendAjax.js}"></script>
 <script type="text/javascript">

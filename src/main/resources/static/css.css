@@ -1,6 +1,30 @@
 
 
+#headline{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
 
+#create_new_parish{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+.parish_info{
+    border: solid;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+form {
+    text-align: center;
+}
 
 
 
@@ -41,7 +65,7 @@
 /* Input Styles */
 
 .form{
-    width: 100%;
+
     padding: 15px;
     background:#f8f8f8;
     border:1px solid rgba(0, 0, 0, 0.075);
@@ -51,6 +75,9 @@
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
     transition: all 0.4s;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
 }
 
 .form:hover{

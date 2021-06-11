@@ -9,21 +9,32 @@ function getParishes() {
                 const html = `
                     <div id="parishId-${parishData.id}" class="parish_info">
                     <div>
-                    <p>Parish Name</p>
-                     <p>${parishData.name}</p>
+                    <h6>Parish Name</h6>
+                    <p>${parishData.name}</p>
                     </div>
                     <div>
-                    <p>ParishCode</p>
+                    <h6>ParishCode</h6>
                     <p>${parishData.parishCode}</p>
                     </div>
-                         ${parishData.infectionPressure} ${parishData.shutDownTime}
-                        <button onclick="parishDelete(${parishData.id})">
+                    <div>
+                    <h6>Infection pressure</h6>
+                    <p>${parishData.infectionPressure}</p>
+                    </div>
+                    <div>
+                    <h6>When to shut down parrish</h6>
+                    <p>${parishData.shutDownTime}</p>
+                    </div>
+                          
+                        <button style="background-color: red" onclick="parishDelete(${parishData.id})">
                             Delete
                          </button> 
-                         <button onclick="location.href='/updateParish?id=${parishData.id}'">
+                         <button style="background-color: deepskyblue" onclick="location.href='/updateParish?id=${parishData.id}'">
                          Update
                          </button>
+                         <div>
+                         <h6>If checked, then the parish is shut down</h6>
                          <input type="checkbox" id="checkBoxId" ${compareDate(parishData.shutDownTime) ? "checked" : ""}>
+                         </div>
  
                      </div> 
                 `
